@@ -1,16 +1,12 @@
+from users.Account import Account
 
-
-class Player:
+class Player(Account):
     def __init__(self, username, password) -> None:
-        self.username = username
-        self.__password = password
+        super().__init__(username, password)
         self.__session = None
 
-    def login(self):
-        print(self.__password)
-
     def get_username(self):
-        return self.username
+        print(self.username)
 
     def view_friends(self):
         pass

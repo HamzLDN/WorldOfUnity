@@ -1,6 +1,7 @@
+# from src.Player import Player
+# from src.Base import Base
+from users.Account import Account
 from src.Player import Player
-from src.Base import Base
-
 main_layout_base = {
     "level_1_walls": 5
 }
@@ -13,5 +14,6 @@ saved_layouts = [
 ]
 
 if __name__ == '__main__':
-    base = Base(main_layout_base, saved_layouts)
-    player = Player("Username", "Password")
+    user = Player('Username', 'Password')
+    user.register()
+    user.get_username()
