@@ -22,13 +22,16 @@ class Base(Player):
         print(self.main_layout)
         for asset in self.main_layout:
             print(asset, 'corresponds to', self.main_layout[asset])
-            if not self.verify_square(self.main_layout[asset]['cord'], self.main_layout[asset]['area']):
-                print(asset, 'failed to load. Position out of bounds.')
-                return False
+            for walls in self.main_layout[asset]['cord']:
+
+                if not self.verify_square(walls, self.main_layout[asset]['area']):
+                    print(asset, 'failed to load. Position out of bounds.')
+                    return False
         return True
 
 
     def plot_land(self, position_x, position_y, area) -> bool:
+        print("Plotted")
         self.map[position_x:position_x + area, position_y:position_y + area] = '#'
         return True
 

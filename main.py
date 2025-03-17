@@ -4,8 +4,19 @@ from users.Account import Account
 from src.Player import Player
 import numpy as np
 import matplotlib.pyplot as plt
+
+values = []
+for i in range(100):
+    values.append([i, 90])
+# main_layout_base = {
+#     "level_1_walls":  {"cord":[(0, 90), (10, 90), (20, 90), (30, 90), (40, 90), (50, 90)], "area": 1},
+#     "arrow_tower":  {"cord":[(50, 50)], "area": 12},
+# }
 main_layout_base = {
-    "level_1_walls":  {"cord":(0, 91), "area": 10}
+    "level_1_walls":  {"cord":values, "area": 1},
+    "eyes":  {"cord":[(25,20),(65, 20)], "area": 10},
+    "nose":  {"cord":[(45,40)], "area": 10},
+    "mouth":  {"cord":[(25,50),(35, 60),(45, 60), (55, 60), (65, 50)], "area": 10},
 }
 another_one = {
     "level_1_walls": (5, 6)
