@@ -3,7 +3,7 @@ class Account:
     def __init__(self, username, password):
         self.username = username
         self._password = password
-
+        self.loggedin = False
     @property
     def get_password(self):
         return self._password
@@ -13,3 +13,4 @@ class Account:
 
     def login(self):
         print(f"{self.username} logged in successfully with password {self._password}")
+        self.loggedin = True
