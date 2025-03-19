@@ -29,6 +29,8 @@ class Base(Player):
                     return False
         return True
 
+    def delete_object(self, position_x, position_y, area):
+        self.map[position_x:position_x + area, position_y:position_y + area] = ' '
 
     def plot_land(self, position_x, position_y, area) -> bool:
         print("Plotted")

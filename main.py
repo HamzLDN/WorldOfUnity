@@ -13,14 +13,16 @@ for i in range(100):
 #     "arrow_tower":  {"cord":[(50, 50)], "area": 12},
 # }
 main_layout_base = {
-    "level_1_walls":  {"cord":values, "area": 1},
+    "walls":  {"cord":values, "area": 1},
     "eyes":  {"cord":[(25,20),(65, 20)], "area": 10},
     "nose":  {"cord":[(45,40)], "area": 10},
     "mouth":  {"cord":[(25,50),(35, 60),(45, 60), (55, 60), (65, 50)], "area": 10},
 }
+
 another_one = {
     "level_1_walls": (5, 6)
 }
+
 saved_layouts = [
     main_layout_base,
     another_one,
